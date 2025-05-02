@@ -29,7 +29,7 @@ return "todos";
 @PostMapping("/todoNew")
 public String add(@RequestParam String todoItem, @RequestParam
 	String status, Model model) {
-	Todo todo = new Todo(todoItem, status);
+	Todo todo = new Todo(todoItem, status);//this is for to do?
 	todo.setTodoItem(todoItem);
 	todo.setCompleted(status);
 	todoRepository.save(todo);
